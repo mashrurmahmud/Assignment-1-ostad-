@@ -237,9 +237,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .ml-4 {
-    margin-left: calc(var(--spacing) * 4);
-  }
   .block {
     display: block;
   }
@@ -255,17 +252,8 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .h-\[35px\] {
     height: 35px;
-  }
-  .h-\[50px\] {
-    height: 50px;
-  }
-  .h-\[70px\] {
-    height: 70px;
   }
   .h-\[100px\] {
     height: 100px;
@@ -279,20 +267,11 @@
   .w-\[30px\] {
     width: 30px;
   }
-  .w-\[35\] {
-    width: 35;
-  }
   .w-\[35px\] {
     width: 35px;
   }
-  .w-\[70px\] {
-    width: 70px;
-  }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .translate-x-0 {
     --tw-translate-x: calc(var(--spacing) * 0);
@@ -309,9 +288,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -346,9 +322,6 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
-  }
   .space-y-2 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -375,10 +348,6 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -442,10 +411,6 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-\[6px\] {
     font-size: 6px;
   }
@@ -457,9 +422,6 @@
   }
   .text-\[12px\] {
     font-size: 12px;
-  }
-  .text-\[13px\] {
-    font-size: 13px;
   }
   .text-\[14px\] {
     font-size: 14px;
@@ -490,25 +452,12 @@
   .text-\[\#2196F3\] {
     color: #2196F3;
   }
-  .text-\[6\] {
-    color: 6;
-  }
-  .text-\[px\] {
-    color: px;
-  }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -592,11 +541,6 @@
       display: flex;
     }
   }
-  .md\:grid {
-    @media (width >= 48rem) {
-      display: grid;
-    }
-  }
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
@@ -635,11 +579,6 @@
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
-    }
-  }
-  .md\:items-center {
-    @media (width >= 48rem) {
-      align-items: center;
     }
   }
   .md\:justify-between {
@@ -761,16 +700,6 @@
       display: flex;
     }
   }
-  .lg\:grid {
-    @media (width >= 64rem) {
-      display: grid;
-    }
-  }
-  .lg\:grid-cols-3 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
   .lg\:grid-cols-4 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -870,69 +799,62 @@ body {
   position: relative;
   cursor: pointer;
 }
-.dotline::before {
-  position: absolute;
-  content: '';
-  width: 20%;
-  height: 7px;
-  border: 3px;
-  background-color: #2196F3;
-  border-radius: 3px;
-  bottom: 50px;
-  left: 30px;
-  transition: all 0.5s ease-in-out;
-}
 @media screen and (max-width:600px) {
   .dotline::before {
     position: absolute;
     content: '';
     width: 0%;
     height: 7px;
-    border: 3px;
     background-color: #2196F3;
     border-radius: 3px;
-    bottom: -160px;
+    top: -160px;
     left: 0px;
     transition: all 0.5s ease-in-out;
   }
   .dotline:hover::before {
     width: 0%;
+    height: 0px;
+    content: '';
+    position: absolute;
   }
   .dotline {
     box-shadow: 0px 3px 30px gray;
     border-radius: 20px;
     padding: 20px;
     margin: 3px;
-  }
-  .service_banner {
-    background-image: url(./pic/Group\ 29.png);
-    height: 700px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    opacity: 0;
-    visibility: hidden;
+    position: relative;
   }
   .buisness div:hover::before {
     width: 0%;
     height: 5px;
   }
 }
-.dotline:hover::before {
-  width: 50%;
+@media screen and (min-width:800px) {
+  .dotline::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 7px;
+    border: 3px;
+    background-color: #2196F3;
+    border-radius: 3px;
+    bottom: 40px;
+    left: 20px;
+    transition: all 0.5s ease-in-out;
+  }
+  .dotline:hover::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 7px;
+    bottom: 40px;
+    left: 23px;
+    background-color: #2196F3;
+  }
 }
 .buisness div:hover::before {
   width: 100%;
   height: 5px;
-}
-.service_banner {
-  background-image: url(./pic/Group\ 29.png);
-  height: 700px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
 }
 .client-testomonial {
   background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url(./pic/client-banner.jpg);
@@ -1062,11 +984,6 @@ body {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1115,7 +1032,6 @@ body {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }

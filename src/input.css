@@ -132,38 +132,31 @@ body{
     cursor: pointer;
 }
 
-.dotline::before{
-    position: absolute;
-    content: '';
-    width: 20%;
-    height: 7px;
-    border: 3px;
-    background-color: #2196F3;
-    border-radius: 3px;
-    bottom: 50px;
-    left: 30px;
-    transition: all 0.5s ease-in-out;
-}
 
 
-@media screen and (max-width:600px) {
+
+@media screen   and  (max-width:600px) {
     .dotline::before{
          position: absolute;
          content: '';
          width: 0%;
          height: 7px;
-         border: 3px;
+         /* border: 3px; */
          background-color: #2196F3;
          border-radius: 3px;
-         bottom: -160px;
+         top: -160px;
          left: 0px;
          transition: all 0.5s ease-in-out;
         
 
     }
      .dotline:hover::before{
+        
        width: 0%;
        height: 0px;
+       content: '';
+       position: absolute;
+       
 }
 
  .dotline{
@@ -171,12 +164,13 @@ body{
     border-radius: 20px;
     padding: 20px;
     margin: 3px;
+    position: relative;
   
     
     
 }
 
-.service_banner{
+/* .service_banner{
     background-image: url(./pic/Group\ 29.png);
     height: 700px;
     background-repeat: no-repeat;
@@ -185,7 +179,7 @@ body{
     object-fit: cover;
     opacity: 0;
     visibility: hidden;
-}
+} */
 .buisness div:hover::before{
     width: 0%;
     height: 5px;
@@ -198,23 +192,57 @@ body{
     
 }
 /* media query ends */
+@media screen and (min-width:800px){
 
-.dotline:hover::before{
-    width: 50%;
+     .dotline::before{
+         position: absolute;
+         content: '';
+         width: 50%;
+         height: 7px;
+         border: 3px;
+         background-color: #2196F3;
+         border-radius: 3px;
+         bottom: 40px;
+         left: 20px;
+         transition: all 0.5s ease-in-out;
+        
+
+    }
+    .dotline:hover::before{
+          content:'';
+          position: absolute;
+          width: 70%;
+          height: 7px;
+          bottom: 40px;
+          left: 23px;
+          background-color: #2196F3;
+
+    }
+
+    
 }
+/* .dotline:hover::before{
+    content:'';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    top: 23px;
+    left: 23px;
+    background-color: #2196F3;
+} */
 .buisness div:hover::before{
     width: 100%;
     height: 5px;
 }
 
-.service_banner{
+/* .service_banner{
     background-image: url(./pic/Group\ 29.png);
     height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     object-fit: cover;
-}
+} */
 
 
 
