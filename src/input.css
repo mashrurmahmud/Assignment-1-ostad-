@@ -163,6 +163,7 @@ body{
     }
      .dotline:hover::before{
        width: 0%;
+       height: 0px;
 }
 
  .dotline{
